@@ -1,0 +1,106 @@
+body {
+    color: #cfcfcf;
+    background: #303030;
+}
+
+.container {
+    height: 100vh;
+    overflow-y: hidden;
+    margin-top: 0;
+
+    // transition: margin-top 0.5s;
+    // -webkit-transition: margin-top 0.5s;
+    // -moz-transition: margin-top 0.5s;
+    // -ms-transition: margin-top 0.5s;
+    // -o-transition: margin-top 0.5s;
+
+    .main {
+        width: 100%;
+        height: 300vh;
+        margin-top: 0;
+
+        transition: margin-top 0.5s;
+        -webkit-transition: margin-top 0.5s;
+        -moz-transition: margin-top 0.5s;
+        -ms-transition: margin-top 0.5s;
+        -o-transition: margin-top 0.5s;
+    }
+}
+
+
+.block {
+    display: flex;
+    display: -webkit-flex;
+    border-bottom: 1px solid #666;
+    width: 100vh;
+    height: 100vh;
+
+    align-items: center;
+    justify-content: center;
+
+    .item {
+        width: 80%;
+        h1 {
+            margin-bottom: 35px;
+            color: #386973;
+            font-size: 35px;
+            font-weight: bold;
+        }
+
+        .chart {
+            width: 100%;
+            height: 360px;
+        }
+    }
+
+    
+}
+
+.menu {
+    position: fixed;
+    top: 20vh;
+    right: 50px;
+
+    border-left: 1px solid #666;
+
+    width: 40px;
+    height: 60vh;
+
+    .menu-item {
+        display: flex;
+        display: -webkit-flex;
+
+        width: 100%;
+        height: 33%;
+
+        margin-left: -20px;
+
+        align-items: center;
+        justify-content: center;
+
+        span {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+
+            text-align: center;
+            line-height: 40px;
+            color: #9C5738;
+
+            background-color: rgba(80,80,80,1);
+
+            cursor: pointer;
+
+            transition: background-color 0.3s;
+            -webkit-transition: background-color 0.3s;
+            -moz-transition: background-color 0.3s;
+            -ms-transition: background-color 0.3s;
+            -o-transition: background-color 0.3s;
+
+            &:hover {
+                background-color: rgba(90,90,90,1);
+            }
+        }
+    }
+}

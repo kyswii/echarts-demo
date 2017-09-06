@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Files Upload</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link type="text/css" href="./thirdparty/bootstrap/dist/css/bootstrap.min.css" rel="Stylesheet" />
+    <link type="text/css" href="./css/style.css" rel="Stylesheet" />
+
+
+</head>
+
+<body>
+        
+    <div class="container">
+        <div class="main">
+            <div class="row block" id="lineBlock">
+                <div class="item">
+                    <h1>Line</h1>
+                    <div class="chart" id="line"></div>
+                </div>
+            </div>
+            <div class="row block" id="dynamicLineBlock">
+                <div class="item">
+                    <h1>Dynamic Line</h1>
+                    <div class="chart" id="dynamicLine"></div>
+                </div>
+            </div> 
+            <div class="row block" id="dynamicPieBlock">
+                <div class="item">
+                    <h1>Dynamic Pie</h1>
+                    <div class="chart" id="dynamicPie"></div>
+                </div>
+            </div> 
+        </div>
+    </div>
+
+    <aside class="menu">
+        <div class="menu-item"><span id="lineShow"><i>1</i></span></div>
+        <div class="menu-item"><span id="dynamicLineShow"><i>2</i></span></div>
+        <div class="menu-item"><span id="dynamicPieShow"><i>3</i></span></div>
+    </aside>
+
+    <!-- thirdparty -->
+    <script src="./thirdparty/jquery/dist/jquery.min.js"></script>
+    <script src="./thirdparty/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./thirdparty/echarts/dist/echarts.min.js"></script>
+    <script src="./thirdparty/socket.io.client/dist/socket.io-1.3.5.js"></script>
+
+    <script src="./js/line.js"></script>
+    <script src="./js/dynamic-line.js"></script>
+    <script src="./js/dynamic-pie.js"></script>
+
+    <script src="./js/control.js"></script>
+
+
+</body>
+</html>

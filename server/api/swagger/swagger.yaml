@@ -1,0 +1,59 @@
+swagger: "2.0"
+info:
+  version: "0.0.1"
+  title: Likesw App
+# during dev, should point to your local machine
+host: localhost:10010
+# basePath prefixes all resource paths 
+basePath: /v1beta1
+# 
+schemes:
+  # tip: remove http to make production-grade
+  - http
+  - https
+# format of bodies a client can send (Content-Type)
+consumes:
+  - application/json
+  - multipart/form-data
+  - application/x-www-form-urlencoded
+# format of the responses to the client (Accepts)
+produces:
+  - application/json
+  - multipart/form-data
+  - application/x-www-form-urlencoded
+  
+paths:
+
+  /piedata/load:
+    x-swagger-router-controller: pie
+    get:
+      description: Fetch pie Data
+      operationId: fetchPieData
+      responses:
+        "200":
+          description: Success
+          schema:
+            $ref: "#/definitions/HelloWorldResponse"
+     
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+  
+  
+  /swagger:
+    x-swagger-pipe: swagger_raw
+# complex objects have schema definitions
+definitions:
+  HelloWorldResponse:
+    required:
+      - message
+    properties:
+      message:
+        type: string
+  ErrorResponse:
+    required:
+      - message
+    properties:
+      message:
+        type: string
